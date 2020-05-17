@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Text Editor</title>
+
+<style>
+    
+.header{
+
+    background-color: cyan;
+    height:10%;
+    width:auto;
+    text-align: center;
+    font-size: 50px;
+    border-radius: 25px;
+}
+
+.container{
+        margin-top: 2%;
+    background-color: purple;
+    height:100%;
+    width:auto;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#editor{
+        border-radius: 25px;
+    background-color: black;
+    color: white;
+    height:100%;
+    width: 50%;
+    font-size: 20px;
+    font-style: arial;
+    
+}
+#browser{
+    border-radius: 25px;
+
+         color:white;
+        height: 100%;
+        width: 50%;
+        float:right;
+        color:black;
+        
+}
+#menu{
+
+
+       margin-top: 1%;
+    background-color: grey;
+    width:50%;
+    height:10%;
+    border-radius: 20px;
+    text-align: center;
+
+
+}
+#inp1{
+
+
+margin-top: 7%;
+font-size: 25px;
+
+
+}
+
+</style>
+<script type="text/javascript">
+    function run(){
+var gemma=document.getElementById('editor').value;
+document.getElementById('browser').innerHTML=gemma;
+}
+
+</script>
+</head>
+    <body>
+
+
+        <div class="header"> 
+
+            cosmos text editor
+        </div>
+        <div id="menu">
+            
+            <input id="inp1" type="button" name="button1" value="Run the code" onclick="run()">
+
+        </div>
+        <div class="container">
+                <div id="browser"></div>
+            <textarea id="editor"></textarea>
+        </div>
+</body>
+</html>
