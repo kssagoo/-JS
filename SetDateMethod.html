@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            Set Date Method
+        </title>
+    </head>
+    <body>
+        <br>
+        <h1>Set Date Object</h1>
+        <hr>
+        <p id="para1"></p>
+        <hr>
+        <p id="para2"></p>
+        <hr>
+        <p id="para3"></p>
+        <hr>        
+
+        <p id="para4"></p>
+        <hr>
+        <p id="para5"></p>
+        <hr>
+        <p id="para6"></p>
+        <hr>
+        <p id="para7"></p>
+        <hr>
+ 
+    </body>
+
+    <script>
+        //set methods are used to set a date values for date object.
+        var s=new Date();
+        s.setFullYear(2017);
+        document.getElementById("para1").innerHTML=s;
+        //setting month of date object.
+        var a=new Date();
+        a.setMonth(8);
+        document.getElementById("para2").innerHTML=a;
+        //setting day of date object.
+        var d=new Date();
+        d.setDate(5);
+        document.getElementById("para3").innerHTML=d;
+        //setting hours of date object.
+        var f=new Date();
+        f.setHours(2);
+        document.getElementById("para4").innerHTML=f;
+        //setting minutes of date object.
+        var g=new Date();
+        g.setMinutes(59);
+        document.getElementById("para5").innerHTML=g;
+        //setting seconds of date object.
+        var h=new Date();
+        h.setSeconds(59);
+        document.getElementById("para6").innerHTML=h;
+        //setting milliseconds of date object.
+        var i=new Date();
+        i.setMilliseconds(150);
+        document.getElementById("para7").innerHTML=i;
+        
+
+
+
+    </script>
+</html>
