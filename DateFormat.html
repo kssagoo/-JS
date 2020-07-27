@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>
+            Data Formats
+        </title>
+    
+    </head>
+    <body>
+        <h1>
+            Data Formats
+            
+        </h1>
+        <hr>
+        <p id="para1"></p>
+        <hr>
+        <p id="para2"></p>
+        <hr>
+        <p id="para3"></p>
+        
+        <hr>
+        <p id="para4"></p>
+        
+        <hr>
+        <p id="para5"></p>
+        
+        <hr>
+        <p id="para6"></p>
+    
+        <hr>
+        <p id="para7"></p>
+    </body>
+    <script>
+        //Iso standard of dates and times
+        var d=new Date("2020-07-27");
+        document.getElementById("para1").innerHTML=d;
+        // only year
+        document.writeln("<hr>")
+        var s=new Date("2020");
+        document.getElementById("para2").innerHTML=s;
+        //ISO Dates (YYYY-MM-DDTHH:MM:SSZ)
+
+        // var g=new Date("2020-07-27T7:57:00+06:30");
+        // document.getElementById("para3").innerHTML=g;
+
+        //long dates
+        // we can use abb of months
+        var k=new Date("Jul 27 2020");
+        document.getElementById("para3").innerHTML=k;
+        //change the order of day or month
+        var t=new Date("27 Jul 2020");
+        document.getElementById("para4").innerHTML=t;
+        //name of the month can be capital
+        var q=new Date("JULY,25,2020");
+        document.getElementById("para5").innerHTML=q;
+
+        //Date.parse is used to convert date into milliseconds between date and 1-1-1970
+        var prada=Date.parse("Jul 27 2020");
+        document.getElementById("para6").innerHTML=prada;
+        //we can also convert milliseconds into date
+        var var2=new Date(prada);
+        document.getElementById("para7").innerHTML=var2;
+    
+    
+    
+    
+    
+    
+    </script>
+</html>
