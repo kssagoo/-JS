@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <h1>Date format in javascript</h1>
+        <hr>
+        <p id="para"></p>
+        <hr>
+        <script>
+            // //new Date() creates an object for current date and time
+            var kanwal=new Date();
+            document.writeln(kanwal);
+            document.writeln("<hr>");
+            //we can specify year,month,day,hour,minutes,seconds,milliseconds
+            
+            var a=new Date(2020,7,27,6,43,25,36);
+            document.getElementById("para").innerHTML=a;
+        //new Date(datastring ) creates object from a string
+        var her=new Date("July 27,2020 6:53:26");
+        document.writeln(her);
+        
+        //we can add milliseconds in time from 1jan 1970
+
+        var r=new Date(100000000000);
+        document.write("<br><hr>")
+        document.write(r); 
+            //we can also minus milliseconds to October 31 1966
+        
+        var i =new Date(-50000000);
+        document.writeln("<hr>");
+        document.write(i);
+        //toUTCString to convert into UTC String 
+        //toDataString to convert a date in simple form
+        //toISOString to convert into ISO format
+        </script>
+        
+    </body>
+</html>
