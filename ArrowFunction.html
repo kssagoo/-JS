@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Arrow function
+        </title>
+    </head>
+
+    <body>
+        <p id="para1"></p>
+        <hr>
+    </body>
+    <script>
+        var italy;
+        italy=()=>{
+            return "This is an arrow function";
+        }
+        document.getElementById("para1").style.backgroundColor="black";
+        document.getElementById("para1").style.color="white";
+        document.getElementById("para1").style.fontSize="30px";
+        document.getElementById("para1").style.textAlign="center";
+        document.getElementById("para1").innerHTML=italy();
+    
+        //Arrow function with parameters
+        var fun;
+        fun=(val)=>10*val;
+        document.write(fun(50));
+        document.writeln("<hr>");
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</html>
