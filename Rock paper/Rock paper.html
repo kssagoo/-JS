@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors </title>
+    <style>
+        .div1 {
+            background-color: black;
+            color: blanchedalmond;
+            width: 50%;
+            margin: auto;
+            padding: 15px;
+            text-align: center;
+            font-size: 55px;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-top: 30px;
+        }
+
+        .div2 {
+            background-color: black;
+            color: white;
+            width: 35%;
+            height: auto;
+            margin: auto;
+            padding: 15px;
+            position: relative;
+        }
+
+        .span1 {
+            font-size: 25px;
+            position: absolute;
+            top: 70px;
+            left: 190px;
+            clear: right;
+            color: rgb(9, 192, 18);
+            opacity: 0.6;
+
+        }
+
+        .div3 {
+            clear: both;
+            text-align: center;
+        }
+        #r{
+            font-size: 35px;
+            font-weight: bolder;
+            font-style: italic;
+            opacity: 0.7;
+            background-color: crimson;
+            
+            text-align: center;
+        }
+        .btn{
+            font-size: 25px;
+            background-color: rgb(168, 9, 129);
+            border: none;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 15px;
+            transition: 0.3s;
+            cursor: pointer;
+             
+        }
+        .btn:hover{
+            background-color: rgb(67, 133, 13);
+            color: white;
+            box-shadow: 4px 3px 7px rgb(70, 67, 67);
+          
+        }
+        .btn2{
+            background-color: indigo;
+            color: whitesmoke;
+            padding: 15px;
+         border: none;
+         font-size: 25px;
+         border-radius: 30px;
+         transition: 0.3s;
+         margin: 10px;   
+         cursor: pointer;
+        }
+.btn2:hover{
+    background-color: rgb(70, 64, 64);
+    color: yellow;
+    opacity: 0.8;
+    box-shadow: 3px 3px 10px gray;
+}
+    </style>
+</head>
+
+<body>
+    <div class="div1">Rock Paper Scissors game</div>
+    <br><br><br>
+    <div class="div2">
+        <div style="float: left;">
+            <img id="img1" src="pro.jpg" alt="" width="150" height="150">
+            <br><span
+                style="font-size: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You</span>
+
+
+
+        </div>
+        <span class="span1">You vs Computer</span>
+        <div style="float: right;">
+            <img id="Img2" src="pro.jpg" width="150" height="150" alt="">
+            <br><span
+                style="font-size: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;Computer</span>
+
+
+        </div>
+        <br>
+        <div class="div3">
+            <button class="btn" onclick="return Rock()">Rock</button>
+            <button class="btn" onclick="return Paper()">Paper</button>
+            <button class="btn" onclick="return Sci()">Scissors</button>
+            <br><br>
+            <button id="play" class="btn2" onclick="Play()">Play</button>
+            <button id="reset" class="btn2" onclick="Reset()">Reset</button>
+        </div>
+        <br><br>
+        <p id="r"></p>
+
+    </div>
+
+</body>
+<script>
+    var userInput = 0;
+    function Rock() {
+
+        document.getElementById('img1').src = "Urock.png";
+        userInput = 1;
+
+
+    }
+    function Paper() {
+        document.getElementById('img1').src = "Upaper.png";
+        userInput = 2;
+
+
+    }
+    function Sci() {
+        document.getElementById('img1').src = "Usec.png";
+        userInput = 3;
+    }
+    function Play() {
+        var comInput = Math.floor(Math.random() * 3) + 1;
+        //    if(userInput==1){
+        //        document.getElementById('Img2').src="Crock.png";
+        //    }
+        //    if(userInput==2){
+        //        document.getElementById('Img2').src="Cpaper.png";
+        //    }
+        //    if(userInput==3){
+        //        document.getElementById('Img2').src="Csci.png";
+        //    }
+        if (comInput == 1) {
+            document.getElementById('Img2').src = "Crock.png";
+        }
+        if (comInput == 2) {
+            document.getElementById('Img2').src = "Cpaper.png";
+        }
+        if (comInput == 3) {
+            document.getElementById('Img2').src = "Csci.png";
+        }
+        if(userInput==3){
+        if (userInput == 3 && comInput == 1) document.getElementById('r').innerHTML = "YOU LOSE!";
+        else if (userInput == 3 && comInput == 2) document.getElementById('r').innerHTML = "YOU WIN!";
+        else if (userInput == 3 && comInput == 3) document.getElementById('r').innerHTML = "TIE!";
+        else document.getElementById('r').innerHTML = "just play";
+    }
+    if(userInput==2){
+        if(userInput==2 && comInput==1) document.getElementById('r').innerHTML="YOU WIN!"
+        else if(userInput==2 && comInput==2) document.getElementById('r').innerHTML="TIE!"
+        else if (userInput==2 && comInput==3) document.getElementById('r').innerHTML="YOU LOSE!";
+        else document.getElementById('r').innerHTML="just play";
+    }
+    if (userInput==1){
+        if (userInput ==1 && comInput==1) document.getElementById('r').innerHTML="TIE!";
+        else if(userInput==1 && comInput==2) document.getElementById('r').innerHTML="YOU LOSE!";
+        else if(userInput==1 && comInput==3) document.getElementById('r').innerHTML="YOU WIN!"
+        else document.getElementById('r').innerHTML="just play"; 
+    }
+           }
+function Reset(){
+    document.getElementById('img1').src="paris2.jpg";
+    document.getElementById('Img2').src="paris2.jpg";
+}
+</script>
+
+</html>
